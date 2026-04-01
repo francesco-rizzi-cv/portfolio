@@ -5,30 +5,31 @@
   <title>FRANCESCO RIZZI – Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #222; /* dunkelgrau */
-      color: white;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f5f0e6; /* hellbeige Hintergrund */
+      color: #111; /* schwarze Schrift */
       text-align: center;
       margin: 0;
       padding: 0;
     }
 
     header {
-      padding: 3rem 1rem 2rem;
-      background-color: #333;
+      padding: 4rem 1rem 2rem;
+      background-color: #fff; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     header h1 {
       margin: 0;
       font-size: 3rem;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     header h2 {
       margin: 0.5rem 0 0;
       font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
+      font-weight: 400;
+      color: #333;
     }
 
     .portfolio {
@@ -36,31 +37,37 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
-      padding: 2rem;
-      max-width: 700px;
+      padding: 3rem 1rem;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     .card {
-      background-color: #333;
+      background-color: #fff; 
       border-radius: 12px;
-      padding: 1rem;
+      padding: 1.5rem;
       width: 100%;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     }
 
     .card h3 {
       margin: 0.5rem 0 0.3rem;
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #fff;
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #111;
     }
 
     .card p {
       margin: 0.2rem 0 0.5rem;
-      color: #ddd;
-      font-size: 0.9rem;
+      color: #555;
+      font-size: 0.95rem;
       white-space: pre-line;
     }
 
@@ -69,6 +76,22 @@
       height: 360px;
       border: none;
       border-radius: 10px;
+    }
+
+    .card a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 220px;
+      }
     }
   </style>
 </head>
@@ -150,7 +173,7 @@
     <div class="card">
       <h3>Life and Death of God & Mitternacht</h3>
       <p>Rolle: Tonaufnahme | Regisseur: Nik Azad | Kurzspielfilm</p>
-      <a href="https://www.crew-united.com/de/Francesco-Rizzi_716232.html" target="_blank" style="color:#1e90ff; text-decoration:none; font-weight:bold;">Details ansehen</a>
+      <a href="https://www.crew-united.com/de/Francesco-Rizzi_716232.html" target="_blank">Details ansehen</a>
     </div>
 
   </section>
