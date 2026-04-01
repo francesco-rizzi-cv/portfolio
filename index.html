@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #111;
+      background-color: #222; /* dunkelgrau */
       color: white;
       text-align: center;
       margin: 0;
@@ -14,19 +14,21 @@
     }
 
     header {
-      padding: 3rem 1rem 1rem;
-      background-color: #222;
+      padding: 3rem 1rem 2rem;
+      background-color: #333;
     }
 
     header h1 {
       margin: 0;
       font-size: 3rem;
+      font-weight: bold;
     }
 
     header h2 {
       margin: 0.5rem 0 0;
       font-size: 1.5rem;
-      color: #aaa;
+      font-weight: bold;
+      color: #fff;
     }
 
     .portfolio {
@@ -35,35 +37,43 @@
       align-items: center;
       gap: 30px;
       padding: 2rem;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto;
     }
 
     .card {
-      background-color: #222;
-      border-radius: 10px;
+      background-color: #333;
+      border-radius: 12px;
       padding: 1rem;
       width: 100%;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
 
     .card img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-bottom: 0.5rem;
     }
 
     .card h3 {
       margin: 0.5rem 0 0.3rem;
-      font-weight: normal;
+      font-weight: bold;
       font-size: 1.2rem;
+      color: #fff;
     }
 
     .card p {
       margin: 0.2rem 0 0.5rem;
-      color: #aaa;
+      color: #ddd;
       font-size: 0.9rem;
       white-space: pre-line;
     }
@@ -89,77 +99,77 @@
   <section class="portfolio">
 
     <div class="card">
-      <img src="thumbnails/Bild01.png" alt="People & Culture Festival 2022">
+      <img src="thumbnails/bild01.png" alt="People & Culture Festival 2022">
       <h3>People & Culture Festival 2022</h3>
       <p>Datum: 11.11.2022 | Rolle: Produktionsleitung | Firma: media.net</p>
       <a href="https://www.youtube.com/watch?v=fztZxUTK9hE" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild02.jpeg" alt="People & Culture Festival 2025">
+      <img src="thumbnails/bild02.jpeg" alt="People & Culture Festival 2025">
       <h3>People & Culture Festival 2025</h3>
       <p>Datum: 09.10.2025 | Rolle: Remote-Kamera | Firma: media.net</p>
       <a href="https://www.youtube.com/watch?v=QILpF5tKpVY" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild03.jpeg" alt="People & Culture Festival 2024">
+      <img src="thumbnails/bild03.jpeg" alt="People & Culture Festival 2024">
       <h3>People & Culture Festival 2024</h3>
       <p>Datum: 17.10.2024 | Rolle: Remote-Kamera | Firma: media.net</p>
       <a href="https://www.youtube.com/watch?v=HFbPAsbmNXQ" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild04.jpeg" alt="Digitaler Salon">
+      <img src="thumbnails/bild04.jpeg" alt="Digitaler Salon">
       <h3>Digitaler Salon</h3>
       <p>Datum: 06.05.2025 | Rolle: Tonaufnahme | Firma: Alexander von Humboldt Institut</p>
       <a href="https://youtu.be/w8Jdza6uyHg?si=EYeKQly3aGif68ng" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild05.jpeg" alt="Berlin Conference">
+      <img src="thumbnails/bild05.jpeg" alt="Berlin Conference">
       <h3>Berlin Conference</h3>
       <p>Datum: 08.11.2022 | Rolle: Produktionsleitung | Firma: Stiftung Zukunft Berlin</p>
       <a href="https://www.youtube.com/watch?v=36BpAyBW1g0" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild06.jpeg" alt="Aktion Mensch">
+      <img src="thumbnails/bild06.jpeg" alt="Aktion Mensch">
       <h3>Aktion Mensch</h3>
       <p>Datum: 06.12.2022 | Rolle: Kameramann / Tontechnik | Firma: SoVD</p>
       <a href="https://www.youtube.com/watch?v=0v97EpvP5ZI" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild07.jpeg" alt="Fernsehsalon 27.01.2023">
+      <img src="thumbnails/bild07.jpeg" alt="Fernsehsalon 27.01.2023">
       <h3>Fernsehsalon</h3>
       <p>Datum: 27.01.2023 | Rolle: Kameramann | Firma: Deutsche Kinemathek</p>
       <a href="https://www.youtube.com/watch?v=pq2RNHGObS0" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild08.jpeg" alt="Fernsehsalon 14.11.2025">
+      <img src="thumbnails/bild08.jpeg" alt="Fernsehsalon 14.11.2025">
       <h3>Fernsehsalon</h3>
       <p>Datum: 14.11.2025 | Rolle: Kameramann | Firma: Deutsche Kinemathek</p>
       <a href="https://www.youtube.com/watch?v=5l8qiYmlUfQ" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild09.jpeg" alt="Fête de la Musique">
+      <img src="thumbnails/bild09.jpeg" alt="Fête de la Musique">
       <h3>Fête de la Musique</h3>
       <p>Datum: 25.07.2022 | Rolle: Bildmischung | Firma: ALEX Berlin</p>
       <a href="https://www.youtube.com/watch?v=aEnXWOKoSL4" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild10.jpeg" alt="Raum für Notizen">
+      <img src="thumbnails/bild10.jpeg" alt="Raum für Notizen">
       <h3>Raum für Notizen</h3>
       <p>Datum: 02.04.2022 | Rolle: Tontechnik | Firma: ALEX Berlin</p>
       <a href="https://www.youtube.com/watch?v=GbHZtN-VFUY" target="_blank">Video ansehen</a>
     </div>
 
     <div class="card">
-      <img src="thumbnails/Bild11.jpeg" alt="Dichtungsring">
+      <img src="thumbnails/bild11.jpeg" alt="Dichtungsring">
       <h3>Dichtungsring</h3>
       <p>Datum: 24.06.2021 | Rolle: Tontechnik | Firma: ALEX Berlin</p>
       <a href="https://www.youtube.com/live/mdK9k26HRyM?si=mrrFkW52PleKq3qW" target="_blank">Video ansehen</a>
