@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>FRANCESCO RIZZI – Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 3rem 1rem 1rem;
+      background-color: #222;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    header h2 {
+      margin: 0.5rem 0 0;
+      font-size: 1.5rem;
+      color: #aaa;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0 0;
+    }
+
+    .card p {
+      margin: 0.2rem 0;
+      color: #aaa;
+    }
+
+    .card a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FRANCESCO RIZZI</h1>
+    <h2>PORTFOLIO</h2>
+  </header>
+
+  <section class="portfolio">
+
+    <div class="card">
+      <h3>Mitternacht</h3>
+      <p>Datum: 2023 | Rolle: Tonaufnahme | Projekt: Kurzfilm</p>
+      <a href="https://example.com/video1" target="_blank">Video ansehen</a>
+    </div>
+
+    <div class="card">
+      <h3>Projekt XYZ</h3>
+      <p>Datum: 2022 | Rolle: Schnitt | Projekt: Musikvideo</p>
+      <a href="https://example.com/video2" target="_blank">Video ansehen</a>
+    </div>
+
+    <!-- Weitere Projekte hier -->
+    
+  </section>
+
+</body>
+</html>
