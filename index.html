@@ -6,21 +6,29 @@
   <style>
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: #808080; /* Grauer Fallback */
-      background-image: url('Background.JPG'); /* Dein Wallpaper */
-      background-size: contain; /* Bild wird vollständig angezeigt, nicht verzerrt */
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #FFFFFF;
-      text-align: center;
       margin: 0;
       padding: 0;
+      color: #FFFFFF;
+      text-align: center;
+      background-image: url('Background.JPG');
+      background-size: cover;          /* Vollbild */
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Overlay für bessere Lesbarkeit */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.35);   /* leichtes dunkles Overlay */
+      z-index: -1;
     }
 
     header {
       padding: 4rem 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.3);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     header h1 {
@@ -46,18 +54,18 @@
     }
 
     .card {
-      background-color: rgba(0,0,0,0.25);
+      background-color: rgba(128,128,128,0.5); /* halbtransparent grau */
       border-radius: 12px;
       padding: 1.5rem;
       width: 100%;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     }
 
     .card h3 {
