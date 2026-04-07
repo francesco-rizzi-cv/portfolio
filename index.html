@@ -38,7 +38,7 @@
       height: 100vh;
       background: rgba(0,0,0,0.35);
       z-index: 0;
-      pointer-events: none; /* Overlay blockiert keine Klicks mehr */
+      pointer-events: none;
     }
 
     /* HEADER & CONTENT über Video */
@@ -97,31 +97,11 @@
       white-space: pre-line;
     }
 
-    /* 🎥 YouTube Thumbnails */
-    .youtube-thumb {
-      position: relative;
+    iframe {
       width: 100%;
-      max-width: 800px;
-      cursor: pointer;
+      height: 360px;
+      border: none;
       border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .youtube-thumb img {
-      width: 100%;
-      display: block;
-    }
-
-    .youtube-thumb .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60px;
-      height: 60px;
-      background: url('https://img.icons8.com/ios-filled/50/ffffff/play--v1.png') no-repeat center center;
-      background-size: contain;
-      pointer-events: none;
     }
 
     .card a {
@@ -148,6 +128,10 @@
 
     /* 📱 Mobile Fix */
     @media (max-width: 600px) {
+      iframe {
+        height: 220px;
+      }
+
       #bg-video {
         display: none;
       }
@@ -176,59 +160,40 @@
 
   <section class="portfolio">
 
-    <!-- Example Card -->
     <div class="card">
       <h3>People & Culture Festival 2022</h3>
       <p>Datum: 11.11.2022 | Rolle: Produktionsleitung | Firma: media.net</p>
-      <div class="youtube-thumb" data-video="fztZxUTK9hE">
-        <img src="https://img.youtube.com/vi/fztZxUTK9hE/hqdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button"></div>
-      </div>
+      <iframe src="https://www.youtube.com/embed/fztZxUTK9hE?rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 
     <div class="card">
       <h3>People & Culture Festival 2025</h3>
       <p>Datum: 09.10.2025 | Rolle: Remote-Kamera | Firma: media.net</p>
-      <div class="youtube-thumb" data-video="QILpF5tKpVY">
-        <img src="https://img.youtube.com/vi/QILpF5tKpVY/hqdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button"></div>
-      </div>
+      <iframe src="https://www.youtube.com/embed/QILpF5tKpVY?rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 
     <div class="card">
       <h3>People & Culture Festival 2024</h3>
       <p>Datum: 17.10.2024 | Rolle: Remote-Kamera | Firma: media.net</p>
-      <div class="youtube-thumb" data-video="HFbPAsbmNXQ">
-        <img src="https://img.youtube.com/vi/HFbPAsbmNXQ/hqdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button"></div>
-      </div>
+      <iframe src="https://www.youtube.com/embed/HFbPAsbmNXQ?rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 
     <div class="card">
       <h3>Digitaler Salon</h3>
       <p>Datum: 06.05.2025 | Rolle: Tonaufnahme | Firma: Alexander von Humboldt Institut</p>
-      <div class="youtube-thumb" data-video="w8Jdza6uyHg">
-        <img src="https://img.youtube.com/vi/w8Jdza6uyHg/hqdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button"></div>
-      </div>
+      <iframe src="https://www.youtube.com/embed/w8Jdza6uyHg?rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 
     <div class="card">
       <h3>Berlin Conference</h3>
       <p>Datum: 08.11.2022 | Rolle: Produktionsleitung | Firma: Stiftung Zukunft Berlin</p>
-      <div class="youtube-thumb" data-video="36BpAyBW1g0">
-        <img src="https://img.youtube.com/vi/36BpAyBW1g0/hqdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button"></div>
-      </div>
+      <iframe src="https://www.youtube.com/embed/36BpAyBW1g0?rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 
     <div class="card">
       <h3>Aktion Mensch</h3>
       <p>Datum: 06.12.2022 | Rolle: Kameramann / Tontechnik | Firma: SoVD</p>
-      <div class="youtube-thumb" data-video="0v97EpvP5ZI">
-        <img src="https://img.youtube.com/vi/0v97EpvP5ZI/hqdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button"></div>
-      </div>
+      <iframe src="https://www.youtube.com/embed/0v97EpvP5ZI?rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 
     <div class="card">
@@ -244,23 +209,6 @@
     <a href="mailto:francesco-rizzi@gmx.de">Mail</a>
     <a href="https://www.linkedin.com/in/francesco-rizzi-digital" target="_blank">LinkedIn</a>
   </footer>
-
-  <!-- 🎬 JS: Klick auf Thumbnail → Video -->
-  <script>
-    document.querySelectorAll('.youtube-thumb').forEach(function(thumb) {
-      thumb.addEventListener('click', function() {
-        const videoId = thumb.getAttribute('data-video');
-        const iframe = document.createElement('iframe');
-        iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('allow', 'autoplay');
-        iframe.style.width = '100%';
-        iframe.style.height = '360px';
-        iframe.style.border = 'none';
-        thumb.parentNode.replaceChild(iframe, thumb);
-      });
-    });
-  </script>
 
 </body>
 </html>
