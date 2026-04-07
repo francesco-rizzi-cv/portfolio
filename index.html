@@ -14,9 +14,11 @@
       color: #FFFFFF;
       text-align: center;
       overflow-x: hidden;
+      position: relative;
+      z-index: 1;
     }
 
-    /* 🎬 Hintergrundvideo */
+    /* 🎬 BACKGROUND VIDEO */
     #bg-video {
       position: fixed;
       top: 0;
@@ -24,12 +26,10 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      z-index: -2;
-      opacity: 0;
-      transition: opacity 1s ease-in;
+      z-index: -1; /* WICHTIG: sichtbar */
     }
 
-    /* Overlay */
+    /* 🌑 Overlay */
     .overlay {
       position: fixed;
       top: 0;
@@ -37,7 +37,7 @@
       width: 100vw;
       height: 100vh;
       background: rgba(0,0,0,0.35);
-      z-index: -1;
+      z-index: 0;
     }
 
     header {
@@ -71,7 +71,6 @@
       padding: 1.5rem;
       width: 100%;
       text-align: center;
-      box-shadow: none;
       transition: transform 0.2s;
     }
 
@@ -120,7 +119,7 @@
       text-decoration: underline;
     }
 
-    /* 📱 Mobile Fallback */
+    /* 📱 Mobile Fix */
     @media (max-width: 600px) {
       iframe {
         height: 220px;
@@ -139,21 +138,12 @@
 
 <body>
 
-  <!-- 🎬 Background Video -->
-  <video 
-    id="bg-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    poster="Background2.JPG"
-    oncanplay="this.style.opacity=1;"
-  >
-    <source src="hintergrund01.mp4" type="video/mp4">
-    Dein Browser unterstützt kein Video.
+  <!-- 🎬 VIDEO -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="./hintergrund01.mp4" type="video/mp4">
   </video>
 
-  <!-- Overlay -->
+  <!-- 🌑 Overlay -->
   <div class="overlay"></div>
 
   <header>
